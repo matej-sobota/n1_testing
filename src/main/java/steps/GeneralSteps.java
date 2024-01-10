@@ -57,15 +57,6 @@ public class GeneralSteps {
         return baseUrl;
     }
 
-    public void verifyRedirectToExpectedPage(String msg, String url) {
-        verifyRedirectToExpectedPage(msg, url, null);
-    }
-
-    public void verifyRedirectToExpectedPageContains(String msg, String url) {
-        verifyRedirectToExpectedPageContains(msg, url, null);
-    }
-
-
     public void verifyUrlContains(String msg, String contains) {
         System.out.println("Current url: " + driver.getCurrentUrl());
         Assert.assertTrue(msg, driver.getCurrentUrl().contains(contains));
