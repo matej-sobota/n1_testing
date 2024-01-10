@@ -57,24 +57,6 @@ public class GeneralSteps {
         return baseUrl;
     }
 
-    public void verifyRedirectToExpectedPage(String msg, String url, By xpathToSearch) {
-        if (xpathToSearch != null) {
-            while (!driver.findElement(xpathToSearch).isDisplayed()) {
-                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            }
-        } else driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        Assert.assertEquals(msg, url, getCurrentUrlWithoutCredentials());
-    }
-
-    public void verifyRedirectToExpectedPageContains(String msg, String url, By xpathToSearch) {
-        if (xpathToSearch != null) {
-            while (!driver.findElement(xpathToSearch).isDisplayed()) {
-                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-            }
-        } else driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        Assert.assertTrue(msg, getCurrentUrlWithoutCredentials().contains(url));
-    }
-
     public void verifyRedirectToExpectedPage(String msg, String url) {
         verifyRedirectToExpectedPage(msg, url, null);
     }
