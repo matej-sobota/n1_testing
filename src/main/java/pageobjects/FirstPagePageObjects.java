@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FirstPageObjects extends  PageObjects{
+public class FirstPagePageObjects extends  PageObjects{
     private WebDriver driver;
 
-    public FirstPageObjects(WebDriver driver) {
+    public FirstPagePageObjects(WebDriver driver) {
         super(driver);
         this.driver = driver;
         PageFactory.initElements(driver, this);

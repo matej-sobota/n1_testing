@@ -2,7 +2,7 @@ package steps;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
-import pageobjects.FirstPageObjects;
+import pageobjects.FirstPagePageObjects;
 
 public class FirstPageSteps {
 
@@ -12,8 +12,8 @@ public class FirstPageSteps {
         this.driver = driver;
     }
 
-    private FirstPageObjects firstPageObjects() {
-        return new FirstPageObjects(driver);
+    private FirstPagePageObjects firstPageObjects() {
+        return new FirstPagePageObjects(driver);
     }
 
     public void clickOnPlaceholder(){
